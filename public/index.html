@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" >
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+     <link href="style.css" rel="stylesheet">
+
+    <title>Weather App</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="weather-boxs">
+            <!--input field and search icon-->
+            <div class="input-box">
+                <form class="form-field">
+                    <input type="text" placeholder="Enter city" name="weather" class="input-field" id="city-input"> 
+                     <button class="btn" type="button" id="search-icon"><i class="fa-solid fa-magnifying-glass search-icon" ></i></button>
+                </form>
+            </div>
+        </div>    
+        <!--spinning---->
+                <div class="spinner-border text-light spinning" role="status" id="spinning">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+        <!--weather details-->
+
+        
+            <div class="weather-report" id="weather-report">
+                <div class="weather-details">
+                    <div class="row">
+                        
+                    <div class="col-md-6  weather-degree" id="temperature">
+                        60°
+                    </div>
+
+                    <div class="col-md-6 weather-description">
+                        <p class="weather-location" id="city-name">Lagos <span id="weather-emoji">🌤️</span></p>
+                        <p id="description">Description:</p>
+                        <p id="pressure">Pressure:</p>
+                        <p id="humidity">Humidity:</p>
+                        <p id="windspeed">WindSpeed:</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="alert alert-danger alert-dismissible fade show" role="alert" id="errorText">
+            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+            <button type="button" class="btn-close" id="error-message" data-bs-dismiss="alert" aria-label="Close">
+            </button>
+            </div>
+    </div>
+    
+
+
+
+
+        
+    
+    
+
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+     <script src="script.js"></script>
+</body>
+</html>
