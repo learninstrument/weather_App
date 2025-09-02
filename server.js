@@ -41,6 +41,7 @@ function serveStaticFile(res, filePath) {
 }
 
 const server = http.createServer(async(req, res) => {
+  console.log(`Request received: ${req.method} ${req.url}`);  // Added logging
   try {
     const parsedUrl = url.parse(req.url, true);
     const pathname = parsedUrl.pathname;
